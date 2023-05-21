@@ -7,7 +7,7 @@ function run() {
       console.log("Writing ReadMe file"); //this lets the user know that this function has started working even if an error comes up later
       writeReadme("./Utility/README.md", createReadme({ ...responses }))
         .then(() => {
-          console.log("ReadMe file written successfully."); //we hope to see this message pop up in the console...
+          console.log("ReadMe file written successfully."); // this shold show up in the console...
         })
         .catch((err) => {
           console.log("Error writing ReadMe file:", err); //but this message is here just in case
@@ -19,7 +19,7 @@ function writeReadme(fileName, data) {
     return new Promise((resolve, reject) => {
       fs.writeFile(fileName, data, (err) => {
         if (err) {
-          reject(err); //if we get an error, this will tell us what the exact problem is
+          reject(err); //if  the reject appears then it should give me the exact issue
         } else {
           resolve();
         }
@@ -28,7 +28,7 @@ function writeReadme(fileName, data) {
   }
 
 
-const questions = [ //these are all of the questions that are asked to the user as the program runs
+const questions = [ //these questionss are asked during the duration of the program running 
     {
         type: "input",
         name: "title",
@@ -45,7 +45,7 @@ const questions = [ //these are all of the questions that are asked to the user 
         message:"What does this project do?",
     },
     {
-        type:"input", //I was going to make this a list instead but I didn't research what types of creative licenses are available so this is up to the user to specify
+        type:"input", // this is up to the user to answer
         name:"license",
         message:"What type of license does this project have?",
     },
